@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script >
+			let sum = 100
+			while(true)
+			{
+				let num = +prompt(`
+				          请输入相应的数字进行操作：
+                          1.取钱
+                          2.存钱
+                          3.查看余额
+						  4.退出系统
+`)
+              				
+				if(num===4)
+				{
+					break
+				}
+				switch(num){
+					
+					case 1:
+					let qt = +prompt(`请输入要取得金额：`)
+					if(qt>sum){
+						alert(`银行卡余额不足，领取失败`)
+					break
+					}
+					else
+					{
+						alert(`领取成功，卡省余额：${sum-=qt}`)
+						break
+					}
+					case 2:
+					let qu = +prompt(`请输入要存的金额：`)
+					sum +=qu
+					alert(`存钱成功，余额为：${sum}`)
+				break
+                     case 3:
+					alert(`卡剩余额为：${sum}`)
+					break
+							}	
+								 }
+			//document.write(`这是第${sum = sum+i}<br>`)
+		</script>
+	</body>
+
+</html>
